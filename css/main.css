@@ -1,0 +1,929 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Arimo:700);
+@import url(http://fonts.googleapis.com/css?family=Arimo);
+
+@font-face {
+    font-family: 'KristenITC-Regular';
+    src: url('../fonts/KristenITC-Regular/KristenITC-Regular.eot') format('embedded-opentype');
+    src: url('../fonts/KristenITC-Regular/KristenITC-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/KristenITC-Regular/KristenITC-Regular.woff') format('woff'),
+         url('../fonts/KristenITC-Regular/KristenITC-Regular.ttf') format('truetype'),
+         url('../fonts/KristenITC-Regular/KristenITC-Regular.svg#Sri-TSCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ==========================================================================
+   Author's custom styles - Editar a partir daqui
+
+   Edição da Lista
+   ========================================================================== */
+
+body {
+    font-family: 'Arimo', sans-serif;
+}
+
+button, input, select, h1, h2 {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-lista {
+    width: 810px;
+    float: left;
+    background-image: url('../img/background-lista.jpg');
+    height: 1910px;
+    /* background-color: #efc330; */
+}
+
+.topo-lista {
+    float: left;
+    width: 810px;
+    height: 203px;
+}
+
+.chamada {
+    display: block;
+    position: relative;
+    float: left;
+    width: 241px;
+    margin-right: 60px;
+    top: 95px;
+    left: 10px;
+    /* padding: 95px 30px 20px 20px; */
+}
+
+.chamada h1 {
+    font-family: 'Arimo', sans-serif;
+    font-size: 12pt;
+    color: #583966;
+    font-weight: bold;
+    line-height: normal;
+    padding-left: 44px; 
+}
+
+.chamada h2 {
+    font-family: 'Arimo', sans-serif;
+    font-size: 11pt;
+    color: #583966;
+    font-weight: normal;
+    line-height: normal;
+    margin-top: 8px;
+    padding-left: 44px;
+}
+
+
+.campo-busca {
+    font-family: 'Arimo', sans-serif;
+    font-size: 10pt;
+    color: #004f70;
+    width: 190px;
+    padding: 6px 12px;
+    -moz-border-radius-topleft: 6px;
+    -webkit-border-top-left-radius: 6px;
+     border-top-left-radius: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+::-webkit-input-placeholder {
+   color: #004f70;
+}
+
+:-moz-placeholder {
+   color: #004f70;
+}
+
+::-moz-placeholder {
+   color: #004f70;  
+}
+
+:-ms-input-placeholder {  
+   color: #004f70;  
+}
+
+.bt-busca {
+    margin-top: -2px;
+    margin-left: -8px;
+    padding: 4px 10px 5px 10px;
+    background-color: #fff;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.bt-busca i {
+    color: #004f70;
+}
+
+/* .selecao-mes {
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    color: #5a1a93;
+    display: block;
+    margin-top: 1px;
+    padding: 8px 10px;
+    width: 246px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #e8b37a;
+}
+
+.down-selecao {
+    background-color: #eebe8b;
+    font-size: 13pt;
+    font-weight: bold;
+    color: #5a1a93;
+    padding: 4px 6px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    float: left;
+    position: absolute;
+    left: 218px;
+    top: 32px;
+} */
+
+
+.logo {
+    float: left;
+    display: block;
+    position: relative;
+    top: 30px;
+}
+
+
+.listas {
+    display: block;
+    position: relative;
+    float: left;
+    top: 120px;
+    left: 50px;
+}
+
+.card-container {
+    display: block;
+    float: left;
+    margin-top: 50px;
+    padding: 5px 17px;
+}
+
+.card {
+    float: left;
+    padding: 10px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+
+.paginacao {
+    float: left;
+    position: relative;
+    left: 317px;
+    display: block;
+    top: 15px;
+}
+
+.paginacao ul {
+    list-style: none;
+    background-color: #fff;
+    display: inline-block;
+    padding: 9px 18px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px
+}
+
+.paginacao li {
+    display: inline;
+
+}
+
+.paginacao li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.paginacao i.esquerdo {
+    padding-right: 8px; 
+}
+
+.paginacao i.direito {
+    padding-left: 8px; 
+}
+
+.educadora-logo {
+    float: left;
+    display: block;
+    position: relative;
+    top: 668px;
+    left: 250px;
+}
+
+/* ==========================================================================
+   Author's custom styles - Editar a partir daqui
+
+   Edição do player
+   ========================================================================== */
+
+.container-player {
+    width: 810px;
+    height: 1910px;
+    float: left;
+    background-image: url('../img/background-player.jpg');
+    /* background-color: #efc330; */
+}
+
+
+.topo-player {
+    float: left;
+    width: 810px;
+    height: 137px;
+}
+
+.logo-player {
+    float: left;
+    display: block;
+    position: relative;
+    top: 25px;
+    left: 54px;
+}
+
+.player-info {
+    /* float: left; */
+    position: relative;
+    display: block;
+    left: 115px;
+    top: 18px;
+    /* width: 240px; */
+}
+
+.player-info p#player-num {
+    font-family: 'KristenITC-Regular', sans-serif;
+    font-size: 40pt;
+    color: #004f70;
+    float: left;
+    position: relative;
+    top:30px;
+    margin: 0;
+}
+
+.player-info p#player-data {
+    font-family: 'Arimo', sans-serif;
+    font-size: 12pt;
+    color: #004f70;
+    font-weight: 600;
+    line-height: normal;
+    float: left;
+    position: relative;
+    top: 71px;
+    left: 20px;
+    letter-spacing: 0.8px;
+    margin: 0;
+}
+
+
+
+.voltar-player {
+    float: left;
+    display: block;
+    position: absolute;
+    left: 650px;
+    top: 78px;
+}
+
+.voltar-player p {
+    font-family: 'Arimo', sans-serif;
+    font-size: 15pt;
+    color: #a6197f;
+    font-weight: bold;
+    /* letter-spacing: -1px; */
+    padding: 0px;
+    margin: 7px 0px 0px 4px;
+    float: left;
+}
+
+.voltar-img {
+    float: left;
+    position: relative;
+    display: block;
+    right: 3px;
+    bottom: 1px;
+}
+
+.player-wrapper {
+    background-image: url('../img/bg-player-wrapper.png');
+    background-repeat: repeat;
+    float: left;
+    width: 810px;
+    height: 1353px;
+    position: relative;
+    top: 27px;
+}
+
+
+.card-img {
+    float: left;
+    padding: 55px;
+    /* display: block;
+    position: relative;
+    left: 52px;
+    top: 43px; */   
+}
+
+.lista-musicas, .redes-sociais, .comentarios {
+    float: left;
+    width: 700px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+/* player inicio */
+
+.player {
+    font-family: 'Arimo', sans-serif !important;
+    float: left;
+    width: 680px;
+    background-color: #074f70;
+   /*  height: 90px; */
+    position: relative;  
+    left: 54px;
+    top: -54px;
+    padding: 20px 10px;
+    /* margin: -55px 0 0 55px; */
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.jp-audio {
+    width: 94% !important;
+   
+}
+
+.jp-interface {
+    background-color: #074F6F !important;
+    position: relative !important;
+    top: -20px !important;
+}
+
+.jp-audio,
+.jp-audio-stream,
+.jp-video {
+    font-family: 'Arimo', sans-serif !important;
+    font-size: 13pt !important;
+    border: none !important;
+    background-color: #074F6F !important;
+}
+
+.jp-controls {
+    background: none !important;
+    width: 162px !important;
+}
+
+
+.jp-type-playlist .jp-play {
+    background: url(../image/sprite.jpg) no-repeat !important;
+    background-position: -17px -16px !important;
+    height: 60px !important;
+    width: 54px !important;
+    margin: 0 !important;
+    position: relative !important;
+    top: 2px !important;
+}
+
+.jp-state-playing div.jp-type-playlist .jp-play {
+    background: url(../image/sprite.jpg) no-repeat !important;
+    background-position: -17px -88px !important;
+    height: 60px !important;
+    width: 54px !important;
+    margin: 0 !important;
+    position: relative !important;
+    top: 2px !important;
+}
+
+.jp-type-playlist .jp-stop {
+    background: url(../image/sprite.jpg) no-repeat !important;
+    background-position: -27px -157px !important;
+    left: 5px !important;
+    margin: 0 !important;
+    position: relative !important;
+    width: 30px !important;
+    top: 20px !important;
+}
+
+
+.jp-type-playlist .jp-previous {
+    background: url(../image/sprite.jpg) no-repeat !important;
+    background-position: -23px -247px !important;
+    left: 5px !important;
+    margin: 0 !important;
+    position: relative !important;
+    width: 30px !important;
+    top: 20px !important;
+}
+
+.jp-type-playlist .jp-next {
+    background: url(../image/sprite.jpg) no-repeat !important;
+    background-position: -27px -204px !important;
+    left: 10px !important;
+    margin: 0 !important;
+    position: relative !important;
+    width: 30px !important;
+    top: 20px !important;
+}
+
+.jp-audio .jp-controls,
+.jp-audio-stream .jp-controls {
+  margin: 0 !important; 
+  height: 61px !important;
+}
+
+.jp-progress {
+    position: relative !important;
+    left: 167px !important; 
+    top:-26px !important;
+    width: 314px !important;
+    background: none !important;
+}
+
+.jp-seek-bar {
+    background: url(../image/sprite.jpg) repeat-x !important;
+    background-position: 0px -298px !important;
+    height: 7px !important;
+    width: 314px !important;
+    padding: 2px 2px 1px !important;
+}
+
+.jp-play-bar {
+    background: url(../image/sprite.jpg) repeat-x !important;
+    background-position: 0px -317px !important;
+    height: 6px !important;
+    position: absolute !important;
+    top: 1px !important;
+}
+
+
+.jp-toggles {
+    display: none !important;
+}
+
+.jp-state-muted .jp-volume-controls .jp-mute {
+    background: url(../image/sprite.jpg) no-repeat !important;
+    background-position: -41px -419px !important;
+}
+
+.jp-volume-controls .jp-mute {
+    background: url(../image/sprite.jpg) no-repeat !important;
+    background-position: -3px -419px !important;
+}
+
+.jp-volume-controls .jp-volume-max {
+    background: url(../image/sprite.jpg) no-repeat !important;
+    background-position: -77px -419px !important;
+}
+
+.jp-volume-controls {
+    position: relative !important;
+    left: 440px !important;
+    top: 58px !important;
+    width: 205px !important;
+}
+
+.jp-volume-max {
+   left: 191px !important;
+   top:  8px !important;
+}
+
+.jp-volume-bar {
+    background: url(../image/sprite.jpg) no-repeat !important;
+    background-position: 0 -298px !important;
+    position:relative !important;
+    width: 90px !important;
+    left: 85px !important;
+    height: 7px !important;
+}
+
+.jp-volume-bar-value {
+    background: url(../image/sprite.jpg) no-repeat !important;
+    background-position: 0 -363px !important;
+    position:absolute !important;
+    bottom: 0 !important;
+    height: 6px !important;
+    top: 1px !important;
+}
+
+.jp-mute {
+    left: 64px !important;
+    top: 8px !important;
+}
+
+
+.jp-current-time, .jp-duration {
+    display: none !important;
+}
+
+.jp-audio {
+    padding: 0px 20px 10px !important;
+}
+
+.jp-audio .jp-controls-holder {
+    height: 33px !important;
+}
+
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+    padding: 4px 0 !important; 
+    margin: 0 !important;
+    /* border-top: 1px solid #004a6c !important; */
+}
+
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current:first-child {
+    border-top: none !important; 
+    border-bottom: none !important; 
+}
+
+li.jp-playlist-current {
+   /* border-bottom: 1px solid #004a6c !important; */
+}
+
+.jp-playlist {
+    background-color: #033952 !important;
+    width: 660px !important;
+    position: relative !important;
+    display: block !important;
+    left: -31px !important;
+    top: 30px !important;
+    padding: 10px 21px !important;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+li.line-border {
+    border-bottom: 1px solid #004a6c !important;
+}
+
+div.jp-playlist li.jp-playlist-current {
+    background-color: #033952 !important;
+}
+
+.jp-playlist li {
+    padding: 4px 0 !important;
+    border-bottom: none !important; 
+}
+
+
+
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current a {
+    color: #e5b927 !important;
+}
+
+
+div.jp-type-playlist div.jp-playlist a:hover {
+    color: #e5b927 !important; 
+}
+
+
+/* player fim */
+
+.redes-sociais {
+   padding: 20px 0;
+   position: relative;
+   float: left;
+   display: block;
+   left: 55px;
+   top: -53px;
+}
+
+.facebook {
+    float: left;
+    margin-right: 10px;
+}
+
+.twitter {
+    float: left;
+    margin: 2px 10px 0 0;
+}
+
+.comentarios-wrapper {
+    font-family: 'Arimo', sans-serif;
+    position: relative;
+    left: 55px;
+    top: -54px;
+    float: left;
+    padding-bottom: 40px;
+    overflow: hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+   /*background-color: #033952;
+    width: 700px; 
+    padding: 14px 0px 26px 0px; */
+}
+
+.comentarios-inner {
+    width: 720px;
+    background-color: #033952; 
+    padding: 14px 0px 26px 0px;
+    overflow: hidden;
+}
+
+.coment {
+    float: left;
+    padding: 13px 20px 0px 20px;
+} 
+
+.coment img.avatar {
+    float: left;
+    margin: 12px 17px 0px 0px;
+}
+
+.coment h4 {
+    font-size: 12pt;
+    color: #FFF;
+    font-weight: bold;
+    float: left;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+.coment p {
+    font-size: 10pt;
+    color: #b3c4cd;
+    float: left;
+    width: 531px;
+    margin: 6px 0;
+} 
+
+.coment-info {
+    float: left;
+}
+
+.coment-info span {
+    font-size: 11pt;
+    color: #e6cb73;
+    font-weight: bold;
+   /*  margin: 0px 0px 0px 100px; */
+}
+
+.coment-info a {
+    font-weight: bold;
+    font-size: 11pt;
+    color: #94c9e1;
+    text-decoration: none;
+}
+
+.separador {
+    float: left;
+    border-bottom: 1px solid #004a6c;
+    width: 662px;
+    padding-top: 11px;
+}
+
+.nano { 
+    width: 700px !important; 
+    height: 405px !important; 
+}
+
+.nano-pane   { 
+    background: #dfdfdf !important; 
+    height: 415px !important;
+    margin: 15px 6px 5px 0px;
+    width: 7px !important;
+}
+.nano-slider { 
+    background: #828282 !important; 
+    height: 23px !important;
+    margin: 1px 0 !important;
+}
+
+.educadora-logo-player {
+    float: left;
+    display: block;
+    position: relative;
+    top: 103px; 
+    left: 250px;
+}
